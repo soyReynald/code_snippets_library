@@ -1,0 +1,68 @@
+<?php
+// Day 1- 27/9/2026
+// Enter your code here, enjoy!
+
+// Local variables
+// LOCAL VARIABLES depend on the scope
+
+function ice_cream_request() {
+	$price_ice_cream = 50;
+	
+	return "The price of the ice cream was: ".$price_ice_cream;
+}
+
+echo ice_cream_request();
+
+
+// Global variables
+GLOBAL $cookie_pivot;
+
+function entrance_tests_security() {
+	$cookie_pivot = "777";
+	$user_guest_id = $cookie_pivot."4"; 
+	
+	return "\n User id: ".$user_guest_id;
+}
+
+echo entrance_tests_security();
+
+// Static variables
+
+function addANumber() {
+	// STATIC = STAYS (will stay).
+	STATIC $incremented_count = 0;
+	$incremented_count++;
+	
+	return 	"\n".$incremented_count;
+}
+
+echo addANumber();
+echo addANumber();
+
+echo addANumber();
+echo addANumber();
+
+// Function parameters
+
+function buying($price, $buying_chosen) {
+	
+	$ice_cream = 50;
+	$cookie = 40;
+	
+
+	if($buying_chosen === "cookie") {
+		if ($cookie == $price) {
+			return "You have bought a cookie";
+		}
+	}
+	
+	if($buying_chosen === "ice cream") {
+		if ($price === $ice_cream) {
+			echo "You have bought an ice cream";
+		}
+	}
+}
+
+echo "\n\n";
+echo buying(40, "cookie");
+?>
